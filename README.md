@@ -32,7 +32,6 @@ Vision-Embed-Classifier/
 │       │   └── model_builder.py
 │       ├── engine/
 │       │   ├── trainer.py
-│       │   ├── evaluator.py
 │       │   ├── checkpoint.py
 │       │   └── metrics.py
 │       └── utils/
