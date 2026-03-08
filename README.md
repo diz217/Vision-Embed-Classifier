@@ -18,27 +18,26 @@ Vision-Embed-Classifier/
 │   ├── eval.sh
 │   └── infer.sh
 ├── src/
-│   └── clip_classifier/
-│       ├── train.py
-│       ├── evaluate.py
-│       ├── infer.py
-│       ├── data/
-│       │   ├── datasets.py
-│       │   ├── transforms.py
-│       │   └── datamodule.py
-│       ├── models/
-│       │   ├── backbone.py
-│       │   ├── classifier.py
-│       │   └── model_builder.py
-│       ├── engine/
-│       │   ├── trainer.py
-│       │   ├── checkpoint.py
-│       │   └── metrics.py
-│       └── utils/
-│           ├── config.py
-│           ├── logger.py
-│           ├── seed.py
-│           └── visualization.py
+│    ├── train.py
+│    ├── evaluate.py
+│    ├── infer.py
+│    ├── data/
+│    │   ├── datasets.py
+│    │   ├── transforms.py
+│    │   └── datamodule.py
+│    ├── models/
+│    │   ├── backbone.py
+│    │   ├── classifier.py
+│    │   └── model_builder.py
+│    ├── engine/
+│    │   ├── trainer.py
+│    │   ├── checkpoint.py
+│    │   └── metrics.py
+│    └── utils/
+│        ├── config.py
+│        ├── logger.py
+│        ├── seed.py
+│        └── visualization.py
 ├── tests/
 │   ├── test_data.py
 │   ├── test_model.py
