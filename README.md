@@ -56,17 +56,17 @@ Vision-Embed-Classifier/
 ```
 
 ## Core Design Principles 
-
-This repository is designed to demonstrate **clean and reproducible ML engineering practices** rather than a single experimental model script.  
-The system emphasizes modularity, configurability, and clear separation of responsibilities across the training pipeline.
-
-### 1. Modular ML Architecture
-
-The project is organized into independent components responsible for different stages of the ML workflow:
+The repository implements a modular ML system with a clear training lifecycle:
 ```bash
 DataModule → Model Builder → Trainer → Evaluator → Inference
 ```
-Each module encapsulates a specific responsibility:
+Each stage is implemented as an independent component and connected through configuration-driven experiment definitions.
+
+The following principles guide the system design.
+
+### 1. Modular ML Architecture
+
+The training system is decomposed into independent modules with clear responsibilities.
 
 - **Data pipeline** (`data/`): dataset loading, preprocessing, and dataloaders  
 - **Model components** (`models/`): backbone encoder and classifier head  
