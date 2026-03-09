@@ -55,7 +55,7 @@ Vision-Embed-Classifier/
 └── tests/                         # Unit tests for key components
 ```
 
-## Core Design Principles
+## Core Design Principles 
 
 This repository is designed to demonstrate **clean and reproducible ML engineering practices** rather than a single experimental model script.  
 The system emphasizes modularity, configurability, and clear separation of responsibilities across the training pipeline.
