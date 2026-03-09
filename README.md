@@ -124,8 +124,61 @@ Training automatically produces several artifacts:
 
 These artifacts provide transparent experiment tracking and make debugging or comparison across runs straightforward.
 
-## Usage 
+## Results
 
-## Results 
+This section demonstrates the full pipeline: **training → evaluation → inference**.  
+The model uses a pretrained visual encoder with a **cosine classifier head**, and only the classifier head is trained while the backbone remains frozen.
+
+### Training
+
+Training curves show stable convergence of both loss and accuracy.
+Log file: `artifacts/logs/clip_oxford_pet_L14.log`
+
+![Training and Validation Loss](artifacts/figures/clip_oxford_pet_L14_history_loss.png)
+
+![Training and Validation Accuracy](artifacts/figures/clip_oxford_pet_L14_history_acc.png)
+
+Key observations:
+
+- Training accuracy: **96.5%**
+- Validation accuracy: **95.38%**
+- Loss decreases smoothly throughout training
+- Training and validation curves remain close, indicating stable optimization and minimal overfitting
+
+Despite training **only the classifier head**, the model converges quickly thanks to strong pretrained visual embeddings.
+
+### Evaluation
+
+Evaluation was performed using the best checkpoint saved during training.
+
+Log file: `artifacts/logs/clip_oxford_pet_L14_eval.log`
+
+The test accuracy reaches **93.35%**, while:
+- Train accuracy: **96.5%**
+- Validation accuracy: **95.38%**
+
+These values are very close, indicating that the training pipeline generalizes well and does not suffer from overfitting.
+
+Note that **only half of the dataset was used as the test set**, yet the model still achieves strong performance.
+
+### Inference Example
+
+The repository also provides single-image inference.
+
+Example image:
+![Inference Example](data/Abyssinian.jpg)
+
+Model prediction: 
+```
+Top-5 predictions:
+1. Abyssinian (index=0, prob=0.8939)
+2. Bengal (index=5, prob=0.0255)
+3. Egyptian Mau (index=11, prob=0.0161)
+4. Russian Blue (index=27, prob=0.0148)
+5. Siamese (index=32, prob=0.0080)
+```
+The correct class **Abyssinian** is predicted with **89% confidence**, demonstrating that the trained classifier head can reliably map pretrained embeddings to the target label space.
+
+## Usage 
 
 ## Outlooks
