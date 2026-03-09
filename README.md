@@ -194,16 +194,9 @@ Key dependencies include:
 
 ### 2. Prepare Dataset
 
-The project uses the **Oxford-IIIT Pet dataset**.
+The project uses the **Oxford-IIIT Pet dataset**. The dataset is loaded using the torchvision implementation. (Dataset directory: `data/raw/`)
 
-The dataset is loaded using the torchvision implementation.
-
-Dataset directory: `data/raw/`
-
-
-If the dataset is not present, torchvision will download it automatically when running training (depending on the configuration).
-
-Expected structure: `data/raw/oxford-iiit-pet/`
+If the dataset is not present, torchvision will download it automatically when running training (depending on the configuration). Expected structure: `data/raw/oxford-iiit-pet/`
 
 ### 3. Train
 
@@ -211,19 +204,49 @@ Run the training pipeline:
 ```bash
 python src/train.py
 ```
+Training will:
+
+- load experiment configuration
+- build the data pipeline
+- initialize the pretrained visual encoder
+- train the classifier head
+- save checkpoints
+- generate training curves
+
+Outputs are saved to `artifacts/`.
 ### 4. Evaluate
 
 Evaluate the best checkpoint:
 ```bash
 python src/eval.py
 ```
+This will:
+
+- load the best-checkpoint model
+- Evaluate model accuracy on the test dataset, which are separated from the training and validation dataset. 
+
+Evaluation logs are saved to `artifacts/logs/`.
+
 ### 5. Run Inference
 
 Run single-image inference:
 ```bash
 python src/infer.py
 ```
+The script outputs top-k predictions and class probabilities.
+
 ### 6. Configuration
 
-All experiments are controlled through configuration files in `configs/experiment/`. Modifying these configs allows experiments to be reproduced or extended without changing source code.
+All experiments are controlled through configuration files in `configs/experiment/`. 
+
+These files define:
+
+- dataset parameters
+- model backbone and classifier type
+- training hyperparameters
+- checkpoint paths
+- inference settings
+
+Modifying these configs allows experiments to be reproduced or extended without changing source code.
+
 ## Outlooks
