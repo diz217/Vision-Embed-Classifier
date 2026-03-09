@@ -1,0 +1,60 @@
+2026-03-08 18:25:33 | INFO | train | Starting training pipeline.
+2026-03-08 18:25:33 | INFO | train | Experiment name: clip_oxford_pet_baseline
+2026-03-08 18:25:33 | INFO | train | Data module setup complete.
+2026-03-08 18:25:33 | INFO | train | Number of classes: 37
+2026-03-08 18:25:44 | INFO | train | Model built successfully.
+2026-03-08 18:25:44 | INFO | train | Trainer initialized. Starting fit().
+2026-03-08 18:28:05 | INFO | train | Starting training pipeline.
+2026-03-08 18:28:05 | INFO | train | Experiment name: clip_oxford_pet_baseline
+2026-03-08 18:28:05 | INFO | train | Data module setup complete.
+2026-03-08 18:28:05 | INFO | train | Number of classes: 37
+2026-03-08 18:28:06 | INFO | train | Model built successfully.
+2026-03-08 18:28:06 | INFO | train | Trainer initialized. Starting fit().
+2026-03-08 18:42:06 | INFO | train | Training finished.
+2026-03-08 18:42:06 | INFO | train | Best validation accuracy: 0.8995
+2026-03-08 18:42:06 | INFO | train | Training history figure saved to D:\ML_workspace\Visionembed_classifier\artifacts\figures\clip_oxford_pet_baseline_history.png
+2026-03-08 19:04:05 | INFO | train | Starting training pipeline.
+2026-03-08 19:04:05 | INFO | train | Experiment name: clip_oxford_pet_baseline
+2026-03-08 19:04:05 | INFO | train | Data module setup complete.
+2026-03-08 19:04:05 | INFO | train | Number of classes: 37
+2026-03-08 19:04:06 | INFO | train | Model built successfully.
+2026-03-08 19:04:06 | INFO | train | Trainer initialized. Starting fit().
+2026-03-08 19:11:17 | INFO | train | Training finished.
+2026-03-08 19:11:17 | INFO | train | Best validation accuracy: 0.8995
+2026-03-08 19:11:17 | INFO | train | Training history figure saved to D:\ML_workspace\Visionembed_classifier\artifacts\figures\clip_oxford_pet_baseline_history.png
+2026-03-08 20:08:26 | INFO | train | Starting training pipeline.
+2026-03-08 20:08:26 | INFO | train | Experiment name: clip_oxford_pet_baseline
+2026-03-08 20:08:26 | INFO | train | Data module setup complete.
+2026-03-08 20:08:26 | INFO | train | Number of classes: 37
+2026-03-08 20:08:27 | INFO | train | Model built successfully.
+2026-03-08 20:08:28 | INFO | train | Trainer initialized. Starting fit().
+2026-03-08 20:28:47 | INFO | train | Training finished.
+2026-03-08 20:28:47 | INFO | train | Best validation accuracy: 0.9239
+2026-03-08 20:28:47 | INFO | train | Training history figure saved to D:\ML_workspace\Visionembed_classifier\artifacts\figures\clip_oxford_pet_baseline_history.png
+2026-03-08 20:36:51 | INFO | train | Starting training pipeline.
+2026-03-08 20:36:51 | INFO | train | Experiment name: clip_oxford_pet_baseline
+2026-03-08 20:36:51 | INFO | train | Data module setup complete.
+2026-03-08 20:36:51 | INFO | train | Number of classes: 37
+2026-03-08 20:36:59 | INFO | train | Model built successfully.
+2026-03-08 20:37:00 | INFO | train | Trainer initialized. Starting fit().
+2026-03-08 20:57:28 | INFO | train | Training finished.
+2026-03-08 20:57:28 | INFO | train | Best validation accuracy: 0.8886
+2026-03-08 20:57:28 | INFO | train | Training history figure saved to D:\ML_workspace\Visionembed_classifier\artifacts\figures\clip_oxford_pet_baseline_history.png
+2026-03-08 21:19:31 | INFO | train | Starting training pipeline.
+2026-03-08 21:19:31 | INFO | train | Experiment name: clip_oxford_pet_baseline
+2026-03-08 21:19:31 | INFO | train | Data module setup complete.
+2026-03-08 21:19:31 | INFO | train | Number of classes: 37
+2026-03-08 21:20:09 | INFO | train | Starting training pipeline.
+2026-03-08 21:20:09 | INFO | train | Experiment name: clip_oxford_pet_baseline
+2026-03-08 21:20:09 | INFO | train | Data module setup complete.
+2026-03-08 21:20:09 | INFO | train | Number of classes: 37
+2026-03-08 21:20:10 | INFO | train | Model built successfully.
+2026-03-08 21:20:10 | INFO | train | Trainer initialized. Starting fit().
+2026-03-08 21:21:36 | INFO | train | Starting training pipeline.
+2026-03-08 21:21:36 | INFO | train | Experiment name: clip_oxford_pet_baseline
+2026-03-08 21:21:36 | INFO | train | Data module setup complete.
+2026-03-08 21:21:36 | INFO | train | Number of classes: 37
+2026-03-08 21:22:05 | INFO | train | Model built successfully.
+2026-03-08 21:22:05 | INFO | train | Trainer initialized. Starting fit().
+2026-03-08 21:48:52 | INFO | train | Training finished.
+2026-03-08 21:48:52 | INFO | train | Best validation accuracy: 0.9538
