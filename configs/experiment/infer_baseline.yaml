@@ -1,0 +1,32 @@
+experiment_name: clip_oxford_pet_baseline
+seed: 42
+
+data:
+  root: ../data/raw
+  image_size: 224
+  batch_size: 64
+  num_workers: 4
+  val_ratio: 0.1
+  download: false
+  pin_memory: true
+
+model:
+  backbone_name: ViT-L-14
+  pretrained: laion2b_s32b_b82k
+  freeze_backbone: true
+  head_type: cosine
+  cosine_scale: 20.0
+
+trainer:
+  epochs: 10
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  device: cuda
+  checkpoint_dir: ../artifacts/checkpoints
+  best_checkpoint_name: best.pt
+  last_checkpoint_name: last.pt
+  log_every_n_steps: 20
+
+infer:
+  image_path: ../data/sample.jpg
+  top_k: 5
