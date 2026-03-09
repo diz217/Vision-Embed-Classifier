@@ -178,6 +178,52 @@ Top-5 predictions:
 ```
 The correct class **Abyssinian** is predicted with **89% confidence**, demonstrating that the trained classifier head can reliably map pretrained embeddings to the target label space.
 
-## Usage 
+## Usage
 
+### 1. Install Dependencies
+
+Create a Python environment and install the required packages.
+```bash
+pip install -r requirements.txt
+```
+Key dependencies include:
+
+- torch
+- torchvision
+- open_clip_torch
+
+### 2. Prepare Dataset
+
+The project uses the **Oxford-IIIT Pet dataset**.
+
+The dataset is loaded using the torchvision implementation.
+
+Dataset directory: `data/raw/`
+
+
+If the dataset is not present, torchvision will download it automatically when running training (depending on the configuration).
+
+Expected structure: `data/raw/oxford-iiit-pet/`
+
+### 3. Train
+
+Run the training pipeline: 
+```bash
+python src/train.py
+```
+### 4. Evaluate
+
+Evaluate the best checkpoint:
+```bash
+python src/eval.py
+```
+### 5. Run Inference
+
+Run single-image inference:
+```bash
+python src/infer.py
+```
+### 6. Configuration
+
+All experiments are controlled through configuration files in `configs/experiment/`. Modifying these configs allows experiments to be reproduced or extended without changing source code.
 ## Outlooks
