@@ -68,22 +68,22 @@ DataModule → Model Builder → Trainer → Evaluator → Inference
 ```
 Each module encapsulates a specific responsibility:
 
-- **DataModule** handles dataset loading, preprocessing, and dataloader construction.
-- **Model Builder** assembles the full model from backbone and classifier components.
-- **Trainer** manages the training loop, optimization, and checkpointing.
-- **Evaluator** loads trained checkpoints and computes evaluation metrics.
-- **Inference** provides prediction utilities for single-image inputs.
+- **Data pipeline** (`data/`): dataset loading, preprocessing, and dataloaders  
+- **Model components** (`models/`): backbone encoder and classifier head  
+- **Training engine** (`engine/`): optimization loop, metrics, checkpointing  
+- **Utilities** (`utils/`): configuration loading, logging, reproducibility tools
+  
+This separation keeps data processing, model construction, and training logic independent, making the system easier to extend and maintain.
 
-This modular structure makes it easy to modify individual parts of the pipeline without affecting the rest of the system.
 
 ### 2. Configuration-Driven Experiments
 
 All experiments are defined using YAML configuration files:
 ```bash
 configs/experiment/
-train_baseline.yaml
-eval_baseline.yaml
-infer_baseline.yaml
+├── train_baseline.yaml
+├── eval_baseline.yaml
+└── infer_baseline.yaml
 ```
 Configurations are parsed into structured dataclasses:
 ```bash
@@ -93,11 +93,6 @@ ExperimentConfig
 ├── TrainerConfig
 └── InferConfig
 ```
-This design enables:
-- reproducible experiments
-- clean separation between configuration and code
-- easy hyperparameter tuning without modifying source files
-
 ### 3. Pretrained Encoder + Lightweight Classifier
 The model architecture separates **representation learning** from **task-specific classification**.
 
@@ -109,30 +104,25 @@ Benefits of this design include:
 - reduced training cost
 
 ### 4. Reproducible ML Workflow
-The repository provides a clear experiment lifecycle:
-```bash
-train.py → evaluate.py → infer.py
-```
-Each stage loads the same experiment configuration, ensuring consistent model construction and evaluation.
+Reproducibility is enforced explicitly throughout the system.
 
-Outputs are organized into structured artifact directories:
-```bash
-artifacts/
-├── checkpoints/
-├── logs/
-└── figures/
-```
-This makes experiments easy to reproduce and inspect.
+Key mechanisms include:
+
+- **global random seed control** (`utils/seed.py`)
+- deterministic dataset splitting
+- configuration-based experiment definitions
+- structured experiment logs
+
+Together these ensure that training runs can be reproduced reliably across executions.
 
 ### 5. Structured Experiment Outputs
+
 Training automatically produces several artifacts:
 - **checkpoints** – best and last model states
 - **logs** – detailed training and evaluation logs
 - **figures** – training curves for loss and accuracy
 
 These artifacts provide transparent experiment tracking and make debugging or comparison across runs straightforward.
-
-## Configuration system
 
 ## Usage 
 
