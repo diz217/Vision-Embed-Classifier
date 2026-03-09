@@ -9,35 +9,35 @@ Vision-Embed-Classifier/
 ├── requirements.txt
 ├── .gitignore
 ├── configs/
-│   └── experiment/
-│        ├── eval_baseline.yaml
-│        ├── infer_baseline.yaml
-│        └── train_baseline.yaml
+│    └── experiment/
+│         ├── eval_baseline.yaml
+│         ├── infer_baseline.yaml
+│         └── train_baseline.yaml
 ├── data/
-│   └── raw/
+│     └── raw/
 ├── scripts/
 ├── src/
 │    ├── train.py
 │    ├── evaluate.py
 │    ├── infer.py
 │    ├── data/
-│    │   ├── datasets.py
-│    │   ├── transforms.py
-│    │   └── datamodule.py
+│    │    ├── datasets.py
+│    │    ├── transforms.py
+│    │    └── datamodule.py
 │    ├── models/
-│    │   ├── backbone.py
-│    │   ├── classifier.py
-│    │   └── model_builder.py
+│    │    ├── backbone.py
+│    │    ├── classifier.py
+│    │    └── model_builder.py
 │    ├── engine/
-│    │   ├── trainer.py
-│    │   ├── checkpoint.py
-│    │   └── metrics.py
+│    │    ├── trainer.py
+│    │    ├── checkpoint.py
+│    │    └── metrics.py
 │    └── utils/
-│        ├── config.py
-│        ├── logger.py
-│        ├── seed.py
-│        ├── paths.py
-│        └── visualization.py
+│         ├── config.py
+│         ├── logger.py
+│         ├── seed.py
+│         ├── paths.py
+│         └── visualization.py
 ├── artifacts/
 │    ├── checkpoints/
 │    │    ├── best.pt
