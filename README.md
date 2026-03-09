@@ -163,7 +163,7 @@ Note that **only half of the dataset was used as the test set**, yet the model s
 
 ### Inference Example
 
-The repository also provides single-image inference. Example image:
+The repository also provides single-image inference. Example image: (save in `data/Abyssinian.jpg`)
 
 ![Inference Example](data/Abyssinian.jpg)
 
