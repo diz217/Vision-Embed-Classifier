@@ -9,14 +9,13 @@ Vision-Embed-Classifier/
 ├── requirements.txt
 ├── .gitignore
 ├── configs/
-│   ├── model/
-│   ├── data/
-│   ├── train/
 │   └── experiment/
+│        ├── eval_baseline.yaml
+│        ├── infer_baseline.yaml
+│        └── train_baseline.yaml
+├── data/
+│   └── raw/
 ├── scripts/
-│   ├── train.sh
-│   ├── eval.sh
-│   └── infer.sh
 ├── src/
 │    ├── train.py
 │    ├── evaluate.py
@@ -37,14 +36,17 @@ Vision-Embed-Classifier/
 │        ├── config.py
 │        ├── logger.py
 │        ├── seed.py
+│        ├── paths.py
 │        └── visualization.py
 ├── tests/
-│   ├── test_data.py
-│   ├── test_model.py
-│   └── test_config.py
 └── artifacts/
     ├── checkpoints/
+    │    ├── best.pt
+    │    └── last.pt
     ├── logs/
-    ├── metrics/
+    │    ├── clip_oxford_pet_L14_eval.log
+    │    └── clip_oxford_pet_L14.log
     └── figures/
+         ├── clip_oxford_pet_L14_history_acc.png
+         └── clip_oxford_pet_L14_history_loss.png
 ```
