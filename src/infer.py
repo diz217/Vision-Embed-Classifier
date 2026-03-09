@@ -40,7 +40,7 @@ def main() -> None:
     logger.info("Starting inference.")
     set_seed(cfg.seed)
     # user-editable input image path
-    image_path = repo_root / "data" / "sample.jpg"
+    image_path = cfg.image_path
 
     if not image_path.exists():
         raise FileNotFoundError(f"Input image not found: {image_path}")
@@ -79,4 +79,5 @@ def main() -> None:
         print(f"{i}. {pred['class_name']} " f"(index={pred['class_index']}, prob={pred['probability']:.4f})")
 
 if __name__ == "__main__":
+
     main()
