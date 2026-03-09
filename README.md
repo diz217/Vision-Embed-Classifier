@@ -38,15 +38,15 @@ Vision-Embed-Classifier/
 │        ├── seed.py
 │        ├── paths.py
 │        └── visualization.py
-├── tests/
-└── artifacts/
-    ├── checkpoints/
-    │    ├── best.pt
-    │    └── last.pt
-    ├── logs/
-    │    ├── clip_oxford_pet_L14_eval.log
-    │    └── clip_oxford_pet_L14.log
-    └── figures/
-         ├── clip_oxford_pet_L14_history_acc.png
-         └── clip_oxford_pet_L14_history_loss.png
+├── artifacts/
+│    ├── checkpoints/
+│    │    ├── best.pt
+│    │    └── last.pt
+│    ├── logs/
+|    │    ├── clip_oxford_pet_L14_eval.log
+|    │    └── clip_oxford_pet_L14.log
+|    └── figures/
+|         ├── clip_oxford_pet_L14_history_acc.png
+|         └── clip_oxford_pet_L14_history_loss.png
+└── tests/
 ```
