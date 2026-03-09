@@ -249,4 +249,26 @@ These files define:
 
 Modifying these configs allows experiments to be reproduced or extended without changing source code.
 
-## Outlooks
+## Outlook
+
+This repository focuses on demonstrating a clean and reproducible ML training system built around pretrained visual embeddings. Several extensions could further improve the system and broaden its applicability.
+
+### Backbone Fine-Tuning
+
+The current implementation freezes the pretrained visual encoder and trains only the classifier head. Future work could explore partial or full backbone fine-tuning to further improve downstream task performance.
+
+### Larger-Scale Experiments
+
+The pipeline is designed to be configuration-driven, making it straightforward to run experiments with different backbones, classifier heads, or datasets. Extending the system to larger datasets would further validate the robustness of the training pipeline.
+
+### Experiment Tracking
+
+While the current implementation logs metrics and artifacts locally, integrating experiment tracking tools (such as MLflow or Weights & Biases) could make experiment comparison and monitoring easier.
+
+### Distributed Training
+
+The modular training engine could be extended to support distributed or multi-GPU training, enabling faster experimentation with larger models and datasets.
+
+---
+
+Overall, the architecture of the repository is designed to support **scalable and reproducible machine learning experimentation**, making it a solid foundation for further research or production-oriented ML workflows.
