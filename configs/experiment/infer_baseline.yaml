@@ -2,7 +2,7 @@ experiment_name: clip_oxford_pet_baseline
 seed: 42
 
 data:
-  root: ../data/raw
+  root: ../../data/raw
   image_size: 224
   batch_size: 64
   num_workers: 4
@@ -22,11 +22,12 @@ trainer:
   learning_rate: 0.0003
   weight_decay: 0.0001
   device: cuda
-  checkpoint_dir: ../artifacts/checkpoints
+  checkpoint_dir: ../../artifacts/checkpoints
   best_checkpoint_name: best.pt
   last_checkpoint_name: last.pt
   log_every_n_steps: 20
 
 infer:
-  image_path: ../data/sample.jpg
+  image_path: ../../data/Abyssinian.jpg
+  
   top_k: 5
